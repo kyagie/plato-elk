@@ -1,0 +1,4 @@
+api.auth.type: basic
+api.auth.basic.username: admin
+api.auth.basic.password: admin
+log.format: json

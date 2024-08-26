@@ -1,0 +1,9 @@
+FROM docker.elastic.co/logstash/logstash:8.15.0
+
+RUN rm -f /usr/share/logstash/pipeline/logstash.conf
+
+COPY pipeline/ /usr/share/logstash/pipeline/
+
+COPY setting/ /usr/share/logstash/config/
+
+COPY postgresql-42.7.3.jar /usr/share/logstash/postgresql-42.7.3.jar
